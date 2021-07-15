@@ -13,12 +13,12 @@ def Convert(string):
     li = list(string.split("\n"))
     return li
 
-if not os.path.exists(f"/home/luan/projeto_Tcc/cuda_to_csv"):
-    new_folder = os.mkdir(f"/home/luan/projeto_Tcc/cuda_to_csv")
+if not os.path.exists(f"/home/luan/cuda_project/cuda_to_csv"):
+    new_folder = os.mkdir(f"/home/luan/cuda_project/cuda_to_csv")
 else:
     pass
 
-for file in glob.glob("/home/luan/projeto_Tcc/cuda_files/*.csv"):
+for file in glob.glob("/home/luan/cuda_project/cuda_files/*.csv"):
     finfo = Path(file)
     explod_file = finfo.name.split('.')
     title_file = '.'.join(explod_file[:-1])
@@ -46,13 +46,13 @@ for file in glob.glob("/home/luan/projeto_Tcc/cuda_files/*.csv"):
     else:
         pass
 
-    run1 = "cat /home/luan/projeto_Tcc/cuda_files/"+title_file+".csv | grep registers | awk -F'[^0-9]*' '{print $2}'"
+    run1 = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep registers | awk -F'[^0-9]*' '{print $2}'"
     out1 = subprocess.Popen(run1, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
     out1 = out1.decode(encoding)
     out_registers = out1.rstrip('\n')
     out_registers = Convert(out_registers)
 
-    run2 = "cat /home/luan/projeto_Tcc/cuda_files/"+title_file+".csv | grep smem | awk -F'[^0-9]*' '{print $3}'"
+    run2 = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep smem | awk -F'[^0-9]*' '{print $3}'"
     out2 = subprocess.Popen(run2, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
     out2 = out2.decode(encoding)
     out_smem = out2.rstrip('\n')
@@ -60,7 +60,7 @@ for file in glob.glob("/home/luan/projeto_Tcc/cuda_files/*.csv"):
 
     if out_smem == ['']:
         out_smem = '0'
-        run_again = "cat /home/luan/projeto_Tcc/cuda_files/"+title_file+".csv | grep cmem | awk -F'[^0-9]*' '{print $3}'"
+        run_again = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep cmem | awk -F'[^0-9]*' '{print $3}'"
         out4 = subprocess.Popen(run_again, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
         out4 = out4.decode(encoding)
         out_cmem_1 = out4.rstrip('\n')
@@ -71,7 +71,7 @@ for file in glob.glob("/home/luan/projeto_Tcc/cuda_files/*.csv"):
         df.to_csv('./cuda_to_csv/output.csv', mode='a', header= False)
  
     else:
-        run3 = "cat /home/luan/projeto_Tcc/cuda_files/"+title_file+".csv | grep cmem | awk -F'[^0-9]*' '{print $4}'"
+        run3 = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep cmem | awk -F'[^0-9]*' '{print $4}'"
         out3 = subprocess.Popen(run3, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
         out3 = out3.decode(encoding)
         out_cmem = out3.rstrip('\n')

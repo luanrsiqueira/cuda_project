@@ -8,12 +8,12 @@ from pathlib import Path
 architecture = ['30', '35', '52']
 #tile_width = ['8', '16', '32']
 
-if not os.path.exists(f"/home/luan/projeto_Tcc/cuda_files"):
-    new_folder = os.mkdir(f"/home/luan/projeto_Tcc/cuda_files")
+if not os.path.exists(f"/home/luan/cuda_project/cuda_files"):
+    new_folder = os.mkdir(f"/home/luan/cuda_project/cuda_files")
 else:
     pass
 
-for file in glob.glob("cuda_analysis/src/files/*.cu"):
+for file in glob.glob("/home/luan/cuda_project/files/*.cu"):
     finfo = Path(file)
     explod_file = finfo.name.split('.')
     title_file = '.'.join(explod_file[:-1])
