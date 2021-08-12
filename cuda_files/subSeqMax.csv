@@ -1,5 +1,6 @@
 Name: subSeqMax
 Tile_Width: 128
+Architecture: 3.0
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z9subSeqMaxPiS_ii' for 'sm_30'
 ptxas info    : Function properties for _Z9subSeqMaxPiS_ii
@@ -7,6 +8,7 @@ ptxas info    : Function properties for _Z9subSeqMaxPiS_ii
 ptxas info    : Used 28 registers, 16392 bytes smem, 344 bytes cmem[0]
 Name: subSeqMax
 Tile_Width: 128
+Architecture: 3.5
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z9subSeqMaxPiS_ii' for 'sm_35'
 ptxas info    : Function properties for _Z9subSeqMaxPiS_ii
@@ -14,6 +16,7 @@ ptxas info    : Function properties for _Z9subSeqMaxPiS_ii
 ptxas info    : Used 28 registers, 16392 bytes smem, 344 bytes cmem[0]
 Name: subSeqMax
 Tile_Width: 128
+Architecture: 5.2
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z9subSeqMaxPiS_ii' for 'sm_52'
 ptxas info    : Function properties for _Z9subSeqMaxPiS_ii

@@ -1,5 +1,6 @@
 Name: matrix_sum_normal
-Tile_Width: 8
+Tile_Width: 16
+Architecture: 3.0
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z6matSumPfS_S_i' for 'sm_30'
 ptxas info    : Function properties for _Z6matSumPfS_S_i
@@ -7,20 +8,7 @@ ptxas info    : Function properties for _Z6matSumPfS_S_i
 ptxas info    : Used 8 registers, 348 bytes cmem[0]
 Name: matrix_sum_normal
 Tile_Width: 16
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matSumPfS_S_i' for 'sm_30'
-ptxas info    : Function properties for _Z6matSumPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: matrix_sum_normal
-Tile_Width: 32
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matSumPfS_S_i' for 'sm_30'
-ptxas info    : Function properties for _Z6matSumPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: matrix_sum_normal
-Tile_Width: 8
+Architecture: 3.5
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z6matSumPfS_S_i' for 'sm_35'
 ptxas info    : Function properties for _Z6matSumPfS_S_i
@@ -28,34 +16,7 @@ ptxas info    : Function properties for _Z6matSumPfS_S_i
 ptxas info    : Used 8 registers, 348 bytes cmem[0]
 Name: matrix_sum_normal
 Tile_Width: 16
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matSumPfS_S_i' for 'sm_35'
-ptxas info    : Function properties for _Z6matSumPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: matrix_sum_normal
-Tile_Width: 32
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matSumPfS_S_i' for 'sm_35'
-ptxas info    : Function properties for _Z6matSumPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: matrix_sum_normal
-Tile_Width: 8
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matSumPfS_S_i' for 'sm_52'
-ptxas info    : Function properties for _Z6matSumPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: matrix_sum_normal
-Tile_Width: 16
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matSumPfS_S_i' for 'sm_52'
-ptxas info    : Function properties for _Z6matSumPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: matrix_sum_normal
-Tile_Width: 32
+Architecture: 5.2
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z6matSumPfS_S_i' for 'sm_52'
 ptxas info    : Function properties for _Z6matSumPfS_S_i

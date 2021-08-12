@@ -24,27 +24,17 @@ for file in glob.glob("/home/luan/cuda_project/cuda_files/*.csv"):
     title_file = '.'.join(explod_file[:-1])
     title_file = Convert(title_file)[0]
 
-    architecture = "cat " + file + " | grep sm_ | awk -F'[^0-9]*' '{print $3}'"
+    architecture = "grep Architecture -Fw " + file + " | awk '{ print $2 }'"
     tt = subprocess.Popen(architecture, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
     tt = tt.decode(encoding)
     out_architecture = tt.rstrip('\n')
     out_architecture = Convert(out_architecture)
-
+    
     tw = "cat " + file + " | grep Tile_Width | awk -F'[^0-9]*' '{print $2}'"
     out_tw = subprocess.Popen(tw, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
     out_tw = out_tw.decode(encoding)
     out_tile_width = out_tw.rstrip('\n')
     out_tile_width = Convert(out_tile_width)
-    #print(out_tile_width)
-
-    if out_architecture == ['0', '0', '0','0', '0', '0','0', '0', '0']:
-        architecture = "cat " + file + " | grep sm_ | awk  -F'[^0-9]*' '{print $4}'"
-        tt = subprocess.Popen(architecture, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
-        tt = tt.decode(encoding)
-        out_architecture = tt.rstrip('\n')
-        out_architecture = Convert(out_architecture)
-    else:
-        pass
 
     run1 = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep registers | awk -F'[^0-9]*' '{print $2}'"
     out1 = subprocess.Popen(run1, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
@@ -68,7 +58,7 @@ for file in glob.glob("/home/luan/cuda_project/cuda_files/*.csv"):
         out_cmem = Convert(out_cmem)
         dict = {'Algorithm': title_file, 'Tile_Width':out_tile_width, 'Architecture': out_architecture, 'Registers': out_registers, 'smem': out_smem, 'cmem' : out_cmem } 
         df = pd.DataFrame(dict) 
-        df.to_csv('./cuda_to_csv/output.csv', mode='a', header= False)
+        df.to_csv('./cuda_to_csv/new_test_tw16.csv', mode='a', header= False)
  
     else:
         run3 = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep cmem | awk -F'[^0-9]*' '{print $4}'"
@@ -79,4 +69,4 @@ for file in glob.glob("/home/luan/cuda_project/cuda_files/*.csv"):
  
         dict = {'Algorithm': title_file, 'Tile_Width':out_tile_width, 'Architecture': out_architecture, 'Registers': out_registers, 'smem': out_smem, 'cmem' : out_cmem }
         df = pd.DataFrame(dict) 
-        df.to_csv('./cuda_to_csv/output.csv', mode='a', header= False)
+        df.to_csv('./cuda_to_csv/new_test_tw16.csv', mode='a', header= False)

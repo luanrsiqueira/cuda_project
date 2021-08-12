@@ -1,5 +1,6 @@
 Name: vectorAdd
-Tile_Width: 8
+Tile_Width: 16
+Architecture: 3.0
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z9vectorAddPKfS0_Pfi' for 'sm_30'
 ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
@@ -7,20 +8,7 @@ ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
 ptxas info    : Used 8 registers, 348 bytes cmem[0]
 Name: vectorAdd
 Tile_Width: 16
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z9vectorAddPKfS0_Pfi' for 'sm_30'
-ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: vectorAdd
-Tile_Width: 32
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z9vectorAddPKfS0_Pfi' for 'sm_30'
-ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: vectorAdd
-Tile_Width: 8
+Architecture: 3.5
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z9vectorAddPKfS0_Pfi' for 'sm_35'
 ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
@@ -28,34 +16,7 @@ ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
 ptxas info    : Used 8 registers, 348 bytes cmem[0]
 Name: vectorAdd
 Tile_Width: 16
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z9vectorAddPKfS0_Pfi' for 'sm_35'
-ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: vectorAdd
-Tile_Width: 32
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z9vectorAddPKfS0_Pfi' for 'sm_35'
-ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: vectorAdd
-Tile_Width: 8
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z9vectorAddPKfS0_Pfi' for 'sm_52'
-ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: vectorAdd
-Tile_Width: 16
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z9vectorAddPKfS0_Pfi' for 'sm_52'
-ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 8 registers, 348 bytes cmem[0]
-Name: vectorAdd
-Tile_Width: 32
+Architecture: 5.2
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z9vectorAddPKfS0_Pfi' for 'sm_52'
 ptxas info    : Function properties for _Z9vectorAddPKfS0_Pfi

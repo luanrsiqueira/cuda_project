@@ -1,63 +1,24 @@
 Name: matMul_gpu_sharedmem
-Tile_Width: 8
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matMulPfS_S_i' for 'sm_30'
-ptxas info    : Function properties for _Z6matMulPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 32 registers, 512 bytes smem, 348 bytes cmem[0]
-Name: matMul_gpu_sharedmem
 Tile_Width: 16
+Architecture: 3.0
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z6matMulPfS_S_i' for 'sm_30'
 ptxas info    : Function properties for _Z6matMulPfS_S_i
     0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
 ptxas info    : Used 25 registers, 2048 bytes smem, 348 bytes cmem[0]
 Name: matMul_gpu_sharedmem
-Tile_Width: 32
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matMulPfS_S_i' for 'sm_30'
-ptxas info    : Function properties for _Z6matMulPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 25 registers, 8192 bytes smem, 348 bytes cmem[0]
-Name: matMul_gpu_sharedmem
-Tile_Width: 8
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matMulPfS_S_i' for 'sm_35'
-ptxas info    : Function properties for _Z6matMulPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 32 registers, 512 bytes smem, 348 bytes cmem[0]
-Name: matMul_gpu_sharedmem
 Tile_Width: 16
+Architecture: 3.5
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z6matMulPfS_S_i' for 'sm_35'
 ptxas info    : Function properties for _Z6matMulPfS_S_i
     0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
 ptxas info    : Used 25 registers, 2048 bytes smem, 348 bytes cmem[0]
 Name: matMul_gpu_sharedmem
-Tile_Width: 32
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matMulPfS_S_i' for 'sm_35'
-ptxas info    : Function properties for _Z6matMulPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 25 registers, 8192 bytes smem, 348 bytes cmem[0]
-Name: matMul_gpu_sharedmem
-Tile_Width: 8
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matMulPfS_S_i' for 'sm_52'
-ptxas info    : Function properties for _Z6matMulPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 31 registers, 512 bytes smem, 348 bytes cmem[0]
-Name: matMul_gpu_sharedmem
 Tile_Width: 16
+Architecture: 5.2
 ptxas info    : 0 bytes gmem
 ptxas info    : Compiling entry function '_Z6matMulPfS_S_i' for 'sm_52'
 ptxas info    : Function properties for _Z6matMulPfS_S_i
     0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
 ptxas info    : Used 27 registers, 2048 bytes smem, 348 bytes cmem[0]
-Name: matMul_gpu_sharedmem
-Tile_Width: 32
-ptxas info    : 0 bytes gmem
-ptxas info    : Compiling entry function '_Z6matMulPfS_S_i' for 'sm_52'
-ptxas info    : Function properties for _Z6matMulPfS_S_i
-    0 bytes stack frame, 0 bytes spill stores, 0 bytes spill loads
-ptxas info    : Used 27 registers, 8192 bytes smem, 348 bytes cmem[0]
