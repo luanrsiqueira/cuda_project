@@ -1,0 +1,19 @@
+Application,Model,MAPE
+MMGU,Random Forest,3.71
+MMGC,Random Forest,0.39
+MMSU,Random Forest,0.46
+MMSC,Random Forest,7.84
+MAC,Random Forest,0.03
+MAU,Random Forest,0.06
+dotP,Random Forest,0.04
+vAdd,Random Forest,0.03
+MSA,Random Forest,0.08
+MMGU,Decision Tree,3.64
+MMGC,Decision Tree,1.01
+MMSU,Decision Tree,0.80
+MMSC,Decision Tree,11.76
+MAC,Decision Tree,0.89
+MAU,Decision Tree,0.10
+dotP,Decision Tree,0.10
+vAdd,Decision Tree,0.81
+MSA,Decision Tree,0.16
