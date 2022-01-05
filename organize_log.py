@@ -6,6 +6,7 @@ import csv
 import glob 
 import pandas as pd
 from pathlib import Path
+import datetime
 
 encoding = 'utf-8'
 
@@ -18,7 +19,9 @@ if not os.path.exists(f"/home/luan/cuda_project/cuda_to_csv"):
 else:
     pass
 
-for file in glob.glob("/home/luan/cuda_project/cuda_files/*.csv"):
+data_teste = datetime.datetime.now().strftime("%Y-%m-%d")
+
+for file in glob.glob("./log_application_files/*.csv"):
     finfo = Path(file)
     explod_file = finfo.name.split('.')
     title_file = '.'.join(explod_file[:-1])
@@ -36,13 +39,13 @@ for file in glob.glob("/home/luan/cuda_project/cuda_files/*.csv"):
     out_tile_width = out_tw.rstrip('\n')
     out_tile_width = Convert(out_tile_width)
 
-    run1 = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep registers | awk -F'[^0-9]*' '{print $2}'"
+    run1 = "cat ./log_application_files/"+title_file+".csv | grep registers | awk -F'[^0-9]*' '{print $2}'"
     out1 = subprocess.Popen(run1, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
     out1 = out1.decode(encoding)
     out_registers = out1.rstrip('\n')
     out_registers = Convert(out_registers)
 
-    run2 = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep smem | awk -F'[^0-9]*' '{print $3}'"
+    run2 = "cat ./log_application_files/"+title_file+".csv | grep smem | awk -F'[^0-9]*' '{print $3}'"
     out2 = subprocess.Popen(run2, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
     out2 = out2.decode(encoding)
     out_smem = out2.rstrip('\n')
@@ -50,7 +53,7 @@ for file in glob.glob("/home/luan/cuda_project/cuda_files/*.csv"):
 
     if out_smem == ['']:
         out_smem = '0'
-        run_again = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep cmem | awk -F'[^0-9]*' '{print $3}'"
+        run_again = "cat ./log_application_files/"+title_file+".csv | grep cmem | awk -F'[^0-9]*' '{print $3}'"
         out4 = subprocess.Popen(run_again, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
         out4 = out4.decode(encoding)
         out_cmem_1 = out4.rstrip('\n')
@@ -58,10 +61,10 @@ for file in glob.glob("/home/luan/cuda_project/cuda_files/*.csv"):
         out_cmem = Convert(out_cmem)
         dict = {'Algorithm': title_file, 'Tile_Width':out_tile_width, 'Architecture': out_architecture, 'Registers': out_registers, 'smem': out_smem, 'cmem' : out_cmem } 
         df = pd.DataFrame(dict) 
-        df.to_csv('./cuda_to_csv/new_test_tw16.csv', mode='a', header= False)
+        df.to_csv(f'./datasets/dataset-{data_teste}.csv', mode='a', header= False)
  
     else:
-        run3 = "cat /home/luan/cuda_project/cuda_files/"+title_file+".csv | grep cmem | awk -F'[^0-9]*' '{print $4}'"
+        run3 = "cat ./log_application_files/"+title_file+".csv | grep cmem | awk -F'[^0-9]*' '{print $4}'"
         out3 = subprocess.Popen(run3, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT).communicate()[0]
         out3 = out3.decode(encoding)
         out_cmem = out3.rstrip('\n')
@@ -69,4 +72,4 @@ for file in glob.glob("/home/luan/cuda_project/cuda_files/*.csv"):
  
         dict = {'Algorithm': title_file, 'Tile_Width':out_tile_width, 'Architecture': out_architecture, 'Registers': out_registers, 'smem': out_smem, 'cmem' : out_cmem }
         df = pd.DataFrame(dict) 
-        df.to_csv('./cuda_to_csv/new_test_tw16.csv', mode='a', header= False)
+        df.to_csv(f'./datasets/dataset-{data_teste}.csv', mode='a', header= False)
