@@ -21,8 +21,8 @@ for file in glob.glob("./cuda_files/*.cu"):
         tile_width = ['128']
 
     else:
-        #tile_width = ['8', '16', '32']
-        tile_width = ['16']
+        tile_width = ['8', '16', '32']
+        #tile_width = ['16']
         
     for row in architecture:
 
